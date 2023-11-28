@@ -13,12 +13,27 @@ public class UnitController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        agent = GetComponent<NavMeshAgent>();
+        anim = GetComponent<Animator>();
+        ms = GetComponent<MySelectable>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        // Move selected units
+        foreach(var soldier in MySelectable.allMySelectables)
+        {
+            if(soldier.selected)
+            {
+                if(Input.GetMouseButtonDown(0))
+                {
+                    if(Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit, 100))
+                    {
+                        agent.destination = hit.point;
+                    }
+                }
+            }
+        }
     }
 }
