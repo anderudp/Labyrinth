@@ -149,12 +149,11 @@ GameObject:
   - component: {fileID: 7689051179248089917}
   - component: {fileID: 8924338803462481588}
   - component: {fileID: 1450596104681470598}
-  - component: {fileID: 829441439259454298}
   - component: {fileID: 3845627466864995177}
-  - component: {fileID: 6054180128721351891}
+  - component: {fileID: -4626900553398382347}
   m_Layer: 0
-  m_Name: ToonRTS_demo_Knight
-  m_TagString: Untagged
+  m_Name: EnemyPrefab
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -168,7 +167,7 @@ Transform:
   m_GameObject: {fileID: 7689051179240654991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.6311665, y: 0.0052940845, z: 19.42}
+  m_LocalPosition: {x: 0, y: 0, z: -40}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -246,21 +245,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.75, y: 1.5, z: 0.5}
   m_Center: {x: 0, y: 0.75, z: 0}
---- !u!114 &829441439259454298
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7689051179240654991}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 297806fb04950af42ba10e858545d113, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  unSelectedMat: {fileID: 2100000, guid: b3ae2273451ef0143a935a5ad49faf7a, type: 2}
-  selectedMatFor: {fileID: 2100000, guid: 7a29d99ba218ea0469236194ce2c2728, type: 2}
-  selected: 0
 --- !u!195 &3845627466864995177
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -283,7 +267,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &6054180128721351891
+--- !u!114 &-4626900553398382347
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +276,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7689051179240654991}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cbb89bf2c6724018b2fe090e27f7bc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 6933cf4eca1d29f4c855010549e19915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &7689051179240654993

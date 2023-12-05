@@ -55,7 +55,19 @@ public class UnitController : MonoBehaviour
         {
             agent.destination = other.gameObject.transform.position;
             anim.SetBool("Attack", true);
-            
+            StartCoroutine(Attack(other));
         }
+    }
+
+    IEnumerator Attack(Collider collider)
+    {
+        while(collider != null && collider.GetComponent<EnemyController>().Health > 0)
+        {
+            transform.LookAt(collider.transform);
+            collider.GetComponent<EnemyController>().Health -= Damage;
+            yield return new WaitForSeconds(delay);
+        }
+        anim.SetBool("Attack", false);
+        if(collider != null) Destroy(collider.gameObject, delay);
     }
 }
